@@ -21,6 +21,6 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"%s","imageUri":"190594267513.dkr.ecr.ap-northeast-2.amazonaws.com/ob-image-registry:latest"}]' > imagedefinitions.json
+      - printf '[{"name":"obServerContainer","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts: 
   files: imagedefinitions.json
