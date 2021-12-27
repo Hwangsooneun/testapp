@@ -1,3 +1,4 @@
+const bcrypt = require("bcrypt")
 const app = require("express")();
 
 app.get("/", (req, res) => {
