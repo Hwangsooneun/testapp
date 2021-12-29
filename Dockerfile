@@ -6,4 +6,4 @@ RUN npm install
 
 COPY . .
 
-CMD node index1.js
+CMD node index.js

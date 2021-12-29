@@ -3,7 +3,7 @@ const app = require("express")();
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Success!! and Docker test",
+    message: "Success!! and Docker test for ec2",
   });
 });
 
