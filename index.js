@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 
 app.get("/hello", (req, res) => {
   res.json({
-    message: "hello1111",
+    message: "지라연동 커밋 테스트",
   });
 });
 
