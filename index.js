@@ -13,7 +13,7 @@ app.use(urlencoded({ extended: false }))
 
 app.get("/", (req, res) => {
   res.json({
-    message: process.env.TEST,
+    message: process.env.TEST2,
   });
 });
 
@@ -45,6 +45,6 @@ app.post("/download", (req, res) => {
   }).end();
 })
 
-app.listen(80, () => {
+app.listen(3050, () => {
   console.log("Server starting on port 80");
 });

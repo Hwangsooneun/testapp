@@ -1,4 +1,4 @@
-FROM --platform=amd64 190594267513.dkr.ecr.ap-northeast-2.amazonaws.com/node:latest
+FROM 190594267513.dkr.ecr.ap-northeast-2.amazonaws.com/node:latest
 WORKDIR /usr/src/app
 COPY . .
 
