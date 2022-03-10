@@ -1,13 +1,12 @@
 version: 0.2
 env:
   secrets-manager:
-    SECRET: TEST_ENV2
+    TEST2: TEST_ENV2:TEST2
+    SECRET: TEST_ENV2:SECRET
 phases:
   pre_build:
     commands:
       - printenv > .env
-      - echo "TEST IS $TEST2"
-      - echo "TEST IS $SECRET"
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 190594267513.dkr.ecr.ap-northeast-2.amazonaws.com
       - REPOSITORY_URI=190594267513.dkr.ecr.ap-northeast-2.amazonaws.com/test
