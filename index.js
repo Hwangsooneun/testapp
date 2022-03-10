@@ -45,6 +45,6 @@ app.post("/download", (req, res) => {
   }).end();
 })
 
-app.listen(80, () => {
+app.listen(3050, () => {
   console.log("Server starting on port 80");
 });
