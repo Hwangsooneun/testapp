@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(urlencoded({ extended: false }))
 
 app.get("/", (req, res) => {
-  res.json(`Without moment TIME is ${new Date()}, With moment TIME is ${utc()}`);
+  res.json(`TEST2 IS ${process.env.TEST2} SECRET IS ${process.env.SECRET}`);
 });
 
 app.get("/hello", (req, res) => {
