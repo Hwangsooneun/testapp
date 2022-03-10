@@ -12,9 +12,7 @@ app.use(express.json())
 app.use(urlencoded({ extended: false }))
 
 app.get("/", (req, res) => {
-  res.json({
-    message: process.env.TEST2,
-  });
+  res.json(`TEST2 ${process.env.TEST2} SECRETS ${process.env.SECRET}`);
 });
 
 app.get("/hello", (req, res) => {
