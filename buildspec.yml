@@ -1,7 +1,7 @@
 version: 0.2
 env:
   secrets-manager:
-    TEST2: TEST_ENV2:TEST2
+    TEST2: ob-back-env:PORT
     SECRET: TEST_ENV2:SECRET
 phases:
   pre_build:

@@ -6,13 +6,15 @@ const http = require('http')
 const Stream = require('stream').Transform;
 const fs = require('fs');
 const dotenv = require('dotenv')
+const moment = require('moment');
+const { utc } = require("moment");
 dotenv.config()
 
 app.use(express.json())
 app.use(urlencoded({ extended: false }))
 
 app.get("/", (req, res) => {
-  res.json(`TEST2 ${process.env.TEST2} SECRETS ${process.env.SECRET}`);
+  res.json(`Without moment TIME is ${new Date()}, With moment TIME is ${utc()}`);
 });
 
 app.get("/hello", (req, res) => {
@@ -43,6 +45,6 @@ app.post("/download", (req, res) => {
   }).end();
 })
 
-app.listen(3050, () => {
+app.listen(80, () => {
   console.log("Server starting on port 80");
 });
