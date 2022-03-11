@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 app.get("/hello", (req, res) => {
   res.json({
-    message: "지라연동 커밋 테스트, 브랜치 및 커밋",
+    message: "지라연동 커밋 테스트, 브랜치 및 커밋2222222222222",
   });
 });
 
