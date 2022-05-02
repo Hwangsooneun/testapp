@@ -8,13 +8,17 @@ const fs = require('fs');
 const dotenv = require('dotenv')
 const moment = require('moment');
 const { utc } = require("moment");
+const axios = require("axios")
 dotenv.config()
 
 app.use(express.json())
 app.use(urlencoded({ extended: false }))
 
 app.get("/", (req, res) => {
-  res.json(`TEST2 IS ${process.env.TEST2} SECRET IS ${process.env.SECRET}`);
+  axios.get('https://opendart.fss.or.kr/api/corpCode.xml?crtfc_key=9bb9ac6289ac4f9b232fef7386575ebb2c694f19').then((res) => {
+    console.log(res)
+    return res
+  })
 });
 
 app.get("/hello", (req, res) => {
@@ -45,6 +49,6 @@ app.post("/download", (req, res) => {
   }).end();
 })
 
-app.listen(3050, () => {
+app.listen(80, () => {
   console.log("Server starting on port 80");
 });
