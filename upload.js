@@ -10,7 +10,7 @@ const s3 = new AWS.S3({
   secretAccessKey: process.env.ACCESS_KEY_SECRET,
   region: 'ap-northeast-2'
 })
-
+console.log('여기도 수정할거임~~~~~~~~~~')
 const upload = multer({
   storage: multerS3({
     s3: s3,

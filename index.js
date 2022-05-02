@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 
 app.get("/hello", (req, res) => {
   res.json({
-    message: "지라연동 커밋 테스트, 브랜치 및 커밋2222222222222풀리퀘스트 테스트",
+    message: "이것도 수정했찌롱 ㅎㅎㅎ",
   });
 });
 
@@ -50,5 +50,5 @@ app.post("/download", (req, res) => {
 })
 
 app.listen(80, () => {
-  console.log("Server starting on port 80");
+  console.log("Server starting on port 80이거수정할거얌 ㅎㅎ");
 });
